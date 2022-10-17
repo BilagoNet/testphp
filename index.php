@@ -1,5 +1,6 @@
 <?php
 
+header('Content-Type: application/json');
 
 $API_KEY = '1936594972:AAGOeDpbb3gBuffGIkDzMcNAtNuE-gooXm4';
 
@@ -27,9 +28,5 @@ $chat_id = $message->chat->id;
 $text = $message->text;
 
 if (preg_match('/^\/([Ss]tart)/', $text)) {
-    echo '{"method":"sendMessage","chat_id": $chat_id,"text":"test"}';
-//     $send =  bot('sendmessage', [
-//         'chat_id' => $chat_id,
-//         'text' => "Matn",
-//     ]);
+    echo '{"method":"sendMessage","chat_id": $chat_id,"text":$text}';
 }
